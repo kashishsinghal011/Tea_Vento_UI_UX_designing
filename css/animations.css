@@ -1,0 +1,92 @@
+/* ===========================================================
+   VENTO — Animations & Motion
+=========================================================== */
+@keyframes spin-slow{ to{ transform: rotate(360deg); } }
+@keyframes loader-blink{
+  0%, 20%{ opacity: 0; } 40%{ opacity: 1; } 80%,100%{ opacity: 0; }
+}
+@keyframes scroll-cue{
+  0%{ transform: translateY(-40px); opacity: 0; }
+  40%{ opacity: 1; }
+  100%{ transform: translateY(40px); opacity: 0; }
+}
+@keyframes marquee-scroll{
+  from{ transform: translateX(0); }
+  to{ transform: translateX(-50%); }
+}
+@keyframes steam-rise{
+  0%{ opacity: 0; transform: translateY(0) scaleY(1); }
+  30%{ opacity: .7; }
+  100%{ opacity: 0; transform: translateY(-14px) scaleY(1.3); }
+}
+/* ---------- Ritual: ambient stage motion ---------- */
+@keyframes ritual-glow-pulse{
+  0%, 100%{ opacity: .55; transform: scale(1); }
+  50%{ opacity: .9; transform: scale(1.06); }
+}
+@keyframes ritual-particle-drift{
+  0%{ opacity: 0; transform: translate(0,0); }
+  20%{ opacity: .7; }
+  100%{ opacity: 0; transform: translate(6px, -34px); }
+}
+@keyframes ritual-caption-swap{
+  0%{ opacity: 0; transform: translateY(10px); filter: blur(3px); clip-path: inset(0 0 100% 0); }
+  100%{ opacity: .7; transform: translateY(0); filter: blur(0); clip-path: inset(0 0 0 0); }
+}
+/* ---------- Reveal-on-scroll (line/word split) ---------- */
+[data-reveal-line]{
+  opacity: 0;
+  transform: translateY(28px);
+}
+.is-revealed[data-reveal-line]{
+  animation: reveal-up .9s var(--ease-out) forwards;
+}
+@keyframes reveal-up{
+  to{ opacity: 1; transform: translateY(0); }
+}
+/* stagger via inline custom property set by JS */
+[data-reveal-line]{ animation-delay: var(--reveal-delay, 0s); }
+.split-line{
+  display: inline-block;
+  overflow: hidden;
+}
+.split-line > span{
+  display: inline-block;
+  transform: translateY(110%);
+  transition: transform .85s var(--ease-out);
+  transition-delay: var(--split-delay, 0s);
+}
+.is-revealed .split-line > span{
+  transform: translateY(0);
+}
+/* ---------- Product card entrance ---------- */
+.product-card{
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity .8s var(--ease-out), transform .8s var(--ease-out), box-shadow .5s var(--ease-out);
+}
+.product-card.is-revealed{
+  opacity: 1;
+  transform: translateY(0);
+  transition-delay: var(--card-delay, 0s);
+}
+.product-card.is-revealed:hover{
+  transform: translateY(-10px);
+}
+/* ---------- Reduced motion ---------- */
+@media (prefers-reduced-motion: reduce){
+  *, *::before, *::after{
+    animation-duration: .001s !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: .15s !important;
+    scroll-behavior: auto !important;
+  }
+  [data-reveal-line], .product-card, .finale-inner [data-finale-seq]{ opacity: 1 !important; transform: none !important; }
+  .split-line > span{ transform: none !important; }
+  .marquee-track{ animation: none !important; }
+  .hero-content > *, .hero-product{ opacity: 1 !important; transform: none !important; }
+  .ritual-glow{ animation: none !important; opacity: .4 !important; }
+  .ritual-particles{ display: none !important; }
+  .hero-steam-video{ display: none !important; }
+  .story-sticky::after{ opacity: 0 !important; }
+}

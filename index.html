@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Vento — Punjabi Chai, Reimagined</title>
+<meta name="description" content="Vento Tea: Kadak Chai, Punjabi Masala Tea and Gold Long Leaf Tea. Slow-brewed strength, blended with intention." />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,500;0,600;0,700;1,500&family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/tokens.css">
+<link rel="stylesheet" href="css/animations.css">
+<link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+
+<!-- ============ LOADER ============ -->
+<div class="loader">
+  <div class="loader-mark">
+    <svg class="loader-swirl" viewBox="0 0 96 96" fill="none">
+      <path d="M48 8C25 8 8 26 8 48s17 40 40 40 40-17 40-40" stroke="currentColor" stroke-width="3" stroke-linecap="round"/>
+    </svg>
+    <svg class="loader-leaf" viewBox="0 0 48 48" fill="none">
+      <path d="M24 4C10 10 6 26 12 38c10-2 22-10 24-26C34 6 28 4 24 4Z" fill="currentColor"/>
+    </svg>
+  </div>
+  <p class="loader-text">Vento <span class="loader-dots"><span>.</span><span>.</span><span>.</span></span></p>
+</div>
+
+<!-- ============ NAV ============ -->
+<header class="nav">
+  <div class="nav-inner">
+    <a href="#" class="nav-logo">Vento</a>
+    <nav class="nav-links">
+      <a href="#story" class="nav-link" data-nav-section="story"><span>Origin</span></a>
+      <a href="#collection" class="nav-link" data-nav-section="collection"><span>Collection</span></a>
+      <a href="#ritual" class="nav-link" data-nav-section="ritual"><span>Ritual</span></a>
+      <a href="#finale" class="nav-link" data-nav-section="finale"><span>Buy Now</span></a>
+      <span class="nav-underline" aria-hidden="true"></span>
+    </nav>
+    <a href="#collection" class="btn btn-primary nav-cta">
+      <span class="btn-fill"></span><span class="btn-label">Shop Vento</span>
+    </a>
+    <button class="nav-burger" aria-label="Menu"><span></span><span></span><span></span></button>
+  </div>
+</header>
+
+<!-- ============ HERO ============ -->
+<section class="hero">
+  <div class="hero-bg" data-parallax="0.15">
+    <div class="hero-glow" data-parallax-layer="glow"></div>
+    <video class="hero-steam-video" data-parallax-layer="steam" autoplay muted loop playsinline>
+      <source src="assets/img/steam-loop.mp4" type="video/mp4">
+    </video>
+    <svg class="hero-steam-field" viewBox="0 0 1440 900" preserveAspectRatio="none">
+      <path class="steam-path" d="M200,900 C230,700 170,600 210,450 C250,300 190,200 220,60"/>
+      <path class="steam-path" d="M1240,900 C1210,720 1270,620 1230,470 C1190,320 1250,220 1220,80"/>
+    </svg>
+
+    <div class="hero-decor hero-leaf-1" data-parallax-layer="leaf" data-leaf-dir="1" style="width:46px;height:46px;">
+      <svg viewBox="0 0 48 48" fill="none"><path d="M24 4C10 10 6 26 12 38c10-2 22-10 24-26C34 6 28 4 24 4Z" fill="currentColor" opacity=".5"/></svg>
+    </div>
+    <div class="hero-decor hero-leaf-2" data-parallax-layer="leaf" data-leaf-dir="-1" style="width:30px;height:30px;">
+      <svg viewBox="0 0 48 48" fill="none"><path d="M24 4C10 10 6 26 12 38c10-2 22-10 24-26C34 6 28 4 24 4Z" fill="currentColor" opacity=".4"/></svg>
+    </div>
+    <div class="hero-decor hero-leaf-3" data-parallax-layer="leaf" data-leaf-dir="1" style="width:22px;height:22px;">
+      <svg viewBox="0 0 48 48" fill="none"><path d="M24 4C10 10 6 26 12 38c10-2 22-10 24-26C34 6 28 4 24 4Z" fill="currentColor" opacity=".45"/></svg>
+    </div>
+    <div class="hero-decor hero-leaf-4" data-parallax-layer="leaf" data-leaf-dir="-1" style="width:36px;height:36px;">
+      <svg viewBox="0 0 48 48" fill="none"><path d="M24 4C10 10 6 26 12 38c10-2 22-10 24-26C34 6 28 4 24 4Z" fill="currentColor" opacity=".35"/></svg>
+    </div>
+    <div class="hero-decor hero-leaf-5" data-parallax-layer="leaf" data-leaf-dir="1" style="width:18px;height:18px;">
+      <svg viewBox="0 0 48 48" fill="none"><path d="M24 4C10 10 6 26 12 38c10-2 22-10 24-26C34 6 28 4 24 4Z" fill="currentColor" opacity=".5"/></svg>
+    </div>
+  </div>
+
+  <div class="hero-content">
+    <p class="hero-eyebrow" data-parallax-layer="type" data-depth="0.35">Punjabi Chai · Slow Brewed</p>
+    <h1 class="hero-title">
+      <span class="line split-line" data-parallax-layer="type" data-depth="0.4"><span>Brewed</span></span>
+      <span class="line split-line" data-parallax-layer="type" data-depth="0.46"><span>for the</span></span>
+      <span class="line split-line" data-parallax-layer="type" data-depth="0.52"><span class="hero-title-accent">Josh.</span></span>
+    </h1>
+    <p class="hero-sub" data-parallax-layer="type" data-depth="0.4">Kadak leaves, hand-picked spice, and a rolling boil — Vento chai jagata hai woh josh jo har subah ka intezaar karti hai.</p>
+    <div class="hero-cta-row" data-parallax-layer="type" data-depth="0.4">
+      <a href="#collection" class="btn btn-primary btn-large"><span class="btn-fill"></span><span class="btn-label">Explore the Collection</span></a>
+      <a href="#story" class="btn btn-ghost btn-large"><span class="btn-label">Our Story</span></a>
+    </div>
+    <div class="hero-stats" data-parallax-layer="type" data-depth="0.32">
+      <div class="hero-stat"><span class="hero-stat-num">100%</span><span class="hero-stat-label">Kadak Strength</span></div>
+      <div class="hero-stat"><span class="hero-stat-num">7+</span><span class="hero-stat-label">Whole Spices</span></div>
+      <div class="hero-stat"><span class="hero-stat-num">0</span><span class="hero-stat-label">Compromise</span></div>
+    </div>
+  </div>
+
+  <div class="hero-visual">
+    <div class="hero-product" data-parallax-layer="product">
+      <div class="hero-product-shadow"></div>
+      <img class="hero-product-img" src="assets/img/kadak-front.png" alt="Vento Kadak Chai pack" />
+      <div class="hero-cup-glow"></div>
+    </div>
+  </div>
+
+  <div class="hero-scroll-cue"><span></span><p>Scroll</p></div>
+</section>
+
+<!-- ============ MARQUEE ============ -->
+<div class="marquee">
+  <div class="marquee-track">
+    <span>Vento चाय जोश जगाये</span><span>·</span>
+    <span>Kadak Chai</span><span>·</span>
+    <span>Punjabi Masala Tea</span><span>·</span>
+    <span>Gold Long Leaf Tea</span><span>·</span>
+    <span>Vento चाय जोश जगाये</span><span>·</span>
+    <span>Kadak Chai</span><span>·</span>
+    <span>Punjabi Masala Tea</span><span>·</span>
+    <span>Gold Long Leaf Tea</span><span>·</span>
+  </div>
+</div>
+
+<!-- ============ STORY (sticky sequence) ============ -->
+<section class="story" id="story">
+  <div class="story-sticky">
+    <div class="story-bg-photos" aria-hidden="true">
+      <img class="story-bg-photo is-active" data-stage="0" src="assets/img/story-origin-garden.png" alt="" />
+      <img class="story-bg-photo" data-stage="1" src="assets/img/story-blend-picker.png" alt="" />
+      <img class="story-bg-photo" data-stage="2" src="assets/img/story-brew-boil.png" alt="" />
+      <img class="story-bg-photo" data-stage="3" src="assets/img/story-ritual-pour.png" alt="" />
+    </div>
+    <svg class="story-bg-swirl" viewBox="0 0 600 600" fill="none">
+      <path d="M300 20C150 20 40 140 40 300s110 280 260 280 260-120 260-280S450 20 300 20Z" stroke="currentColor" stroke-width="20"/>
+    </svg>
+
+    <div class="story-frame is-active">
+      <p class="story-kicker">01 — Origin</p>
+      <h3 class="story-title">From the <em>gardens</em><br>of Assam.</h3>
+      <p class="story-copy">Every Vento leaf begins in the tea gardens of Assam — long, whole leaves picked for body and colour, then rested slowly to hold their strength for the boil.</p>
+    </div>
+    <div class="story-frame">
+      <p class="story-kicker">02 — Blend</p>
+      <h3 class="story-title">Spice, <em>measured</em><br>by hand.</h3>
+      <p class="story-copy">Cardamom, cinnamon, clove and star anise — ground fresh and blended in small batches, so every packet of Punjabi Masala Tea tastes like it came from a Punjabi kitchen.</p>
+    </div>
+    <div class="story-frame">
+      <p class="story-kicker">03 — Brew</p>
+      <h3 class="story-title">A rolling<br><em>boil.</em></h3>
+      <p class="story-copy">Vento is built for the kadak boil — leaves that hold up to milk, sugar and time on the stove, without ever going flat or bitter.</p>
+    </div>
+    <div class="story-frame">
+      <p class="story-kicker">04 — Ritual</p>
+      <h3 class="story-title">Poured into<br><em>everyday josh.</em></h3>
+      <p class="story-copy">A cup of Vento is rarely just a cup — it's the pause before the day starts, and the one that gets you through the middle of it.</p>
+    </div>
+
+    <div class="story-visual">
+      <img class="story-img is-active" data-stage="0" src="assets/img/gold-leaf-tea.png" alt="Vento Gold Long Leaf Tea" />
+      <img class="story-img" data-stage="1" src="assets/img/masala-tea.png" alt="Vento Punjabi Masala Tea" />
+      <img class="story-img" data-stage="2" src="assets/img/kadak-front.png" alt="Vento Kadak Chai" />
+      <img class="story-img" data-stage="3" src="assets/img/kadak-angle.png" alt="Vento Kadak Chai angled" />
+      <div class="story-visual-shadow"></div>
+    </div>
+
+    <div class="story-progress">
+      <div class="story-progress-track"><span class="story-progress-fill"></span></div>
+      <div class="story-progress-labels">
+        <span class="is-active">Origin</span><span>Blend</span><span>Brew</span><span>Ritual</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ SHOWCASE / COLLECTION ============ -->
+<section class="showcase" id="collection">
+  <div class="showcase-head">
+    <p class="section-kicker">The Collection</p>
+    <h2 class="section-title">Three chais.<br>One promise of <em style="color:var(--red);font-style:italic;">josh</em>.</h2>
+  </div>
+
+  <div class="showcase-grid" data-reveal-group>
+    <article class="product-card" data-accent="red">
+      <div class="product-card-media">
+        <div class="product-card-glow"></div>
+        <img class="product-card-img" src="assets/img/kadak-front.png" alt="Vento Kadak Chai" loading="lazy" />
+      </div>
+      <p class="product-card-eyebrow">Signature</p>
+      <h3 class="product-card-title">Kadak Chai</h3>
+      <p class="product-card-notes">Bold · Full-Bodied</p>
+      <p class="product-card-desc">Our strongest blend — built for a rolling boil with milk, made for people who don't do weak chai.</p>
+    </article>
+
+    <article class="product-card" data-accent="orange">
+      <div class="product-card-media">
+        <div class="product-card-glow"></div>
+        <img class="product-card-img" src="assets/img/masala-tea.png" alt="Vento Punjabi Masala Tea" loading="lazy" />
+      </div>
+      <p class="product-card-eyebrow">Spiced</p>
+      <h3 class="product-card-title">Punjabi Masala Tea</h3>
+      <p class="product-card-notes">Cardamom · Cinnamon · Clove</p>
+      <p class="product-card-desc">A whole-spice blend rooted in Punjabi kitchens — warm, aromatic, and made to be shared.</p>
+    </article>
+
+    <article class="product-card" data-accent="gold">
+      <div class="product-card-media">
+        <div class="product-card-glow"></div>
+        <img class="product-card-img" src="assets/img/gold-leaf-tea.png" alt="Vento Gold Long Leaf Tea" loading="lazy" />
+      </div>
+      <p class="product-card-eyebrow">Beas Special</p>
+      <h3 class="product-card-title">Gold Long Leaf Tea</h3>
+      <p class="product-card-notes">Whole Leaf · Rich Colour</p>
+      <p class="product-card-desc">Long, unbroken Assam leaves for a smoother, rounder cup — the everyday tea worth slowing down for.</p>
+    </article>
+  </div>
+</section>
+
+<!-- ============ RITUAL (sticky brewing steps) ============ -->
+<section class="ritual" id="ritual">
+  <div class="ritual-sticky" data-stage="0">
+    <video class="ritual-bg-video" autoplay muted loop playsinline>
+      <source src="assets/img/steam-loop.mp4" type="video/mp4">
+    </video>
+    <div class="ritual-glow"></div>
+
+    <div class="ritual-particles" aria-hidden="true">
+      <span class="ritual-particle" style="--px:12%; --py:70%; --pd:0s;"></span>
+      <span class="ritual-particle" style="--px:82%; --py:60%; --pd:.8s;"></span>
+      <span class="ritual-particle" style="--px:28%; --py:35%; --pd:1.6s;"></span>
+      <span class="ritual-particle" style="--px:68%; --py:28%; --pd:2.2s;"></span>
+      <span class="ritual-particle" style="--px:48%; --py:80%; --pd:1.1s;"></span>
+    </div>
+
+    <div class="ritual-cup-wrap">
+      <div class="ritual-cup">
+        <svg class="ritual-cup-svg" viewBox="0 0 300 260" fill="none">
+          <g class="ritual-steam" stroke="var(--gold-light)" stroke-width="4" stroke-linecap="round" opacity=".8">
+            <path d="M120 60c-10-14 10-20 0-34" />
+            <path d="M150 60c-10-14 10-20 0-34" />
+            <path d="M180 60c-10-14 10-20 0-34" />
+          </g>
+          <path class="ritual-pour-stream" d="M150 -10 L150 90" stroke="var(--gold-light)" stroke-width="6" stroke-linecap="round" opacity="0" />
+          <path d="M60 90h150l-14 110a24 24 0 0 1-24 21H98a24 24 0 0 1-24-21L60 90Z" fill="var(--gold)" opacity=".9"/>
+          <path d="M210 110c26 0 40 16 40 36s-14 34-40 34" stroke="var(--cream)" stroke-width="10" stroke-linecap="round"/>
+          <ellipse class="ritual-cup-liquid" cx="135" cy="92" rx="76" ry="10" fill="var(--gold-light)"/>
+        </svg>
+      </div>
+    </div>
+
+    <div class="ritual-steps">
+      <div class="ritual-step is-active" data-caption="Water at a rolling boil.">
+        <span class="ritual-step-num">01</span>
+        <span class="ritual-step-label">Boil</span>
+      </div>
+      <div class="ritual-step" data-caption="Leaves and whole spice go in together.">
+        <span class="ritual-step-num">02</span>
+        <span class="ritual-step-label">Steep</span>
+      </div>
+      <div class="ritual-step" data-caption="Milk and sugar, low and slow.">
+        <span class="ritual-step-num">03</span>
+        <span class="ritual-step-label">Simmer</span>
+      </div>
+      <div class="ritual-step" data-caption="Strained, poured, and passed around.">
+        <span class="ritual-step-num">04</span>
+        <span class="ritual-step-label">Pour</span>
+      </div>
+    </div>
+
+    <p class="ritual-caption">Water at a rolling boil.</p>
+  </div>
+</section>
+
+<!-- ============ FINALE / CTA ============ -->
+<section class="finale" id="finale">
+  <svg class="finale-bg-swirl" viewBox="0 0 600 600" fill="none">
+    <path d="M300 20C150 20 40 140 40 300s110 280 260 280 260-120 260-280S450 20 300 20Z" stroke="currentColor" stroke-width="20"/>
+  </svg>
+  <div class="finale-inner">
+    <p class="section-kicker" data-finale-seq="1">Ready when you are</p>
+    <h2 class="finale-title" data-finale-seq="2">Your next cup<br>starts here.</h2>
+    <img class="finale-signature" data-finale-seq="3" src="assets/img/vento-tagline.png" alt="Vento chai josh jagaye" />
+    <div class="finale-product" data-finale-seq="4">
+      <div class="finale-product-shadow"></div>
+      <img class="finale-product-img" src="assets/img/kadak-angle.png" alt="Vento Kadak Chai pack" />
+    </div>
+    <div class="finale-cta-row" data-finale-seq="5">
+      <a href="#collection" class="btn btn-primary btn-large"><span class="btn-fill"></span><span class="btn-label">Shop the Collection</span></a>
+      <a href="#story" class="btn btn-ghost btn-large"><span class="btn-label">Read Our Story</span></a>
+    </div>
+  </div>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="footer" data-reveal-line>
+    <div class="footer-top">
+      <div>
+        <p class="footer-logo">Vento</p>
+        <p class="footer-tagline">Vento चाय जोश जगाये</p>
+      </div>
+      <div class="footer-links">
+        <div class="footer-col">
+          <p class="footer-col-title">Collection</p>
+          <a href="#collection">Kadak Chai</a>
+          <a href="#collection">Punjabi Masala Tea</a>
+          <a href="#collection">Gold Long Leaf Tea</a>
+        </div>
+        <div class="footer-col">
+          <p class="footer-col-title">Vento</p>
+          <a href="#story">Our Story</a>
+          <a href="#ritual">The Ritual</a>
+          <a href="#finale">Buy Now</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© <span id="year"></span> Vento Tea. All rights reserved.</span>
+      <span>Made with josh, brewed with intention.</span>
+    </div>
+  </footer>
+</section>
+
+<script src="js/scroll.js"></script>
+<script src="js/app.js"></script>
+<script src="js/hero.js"></script>
+<script src="js/story.js"></script>
+<script src="js/products.js"></script>
+<script src="js/ritual.js"></script>
+<script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>

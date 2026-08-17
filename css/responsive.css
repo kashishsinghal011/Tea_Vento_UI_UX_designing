@@ -1,0 +1,91 @@
+/* ===========================================================
+   VENTO — Responsive
+=========================================================== */
+/* ---------- Tablet ---------- */
+@media (max-width: 991px){
+  .nav-links{ display: none; }
+  .nav-cta{ display: none; }
+  .nav-burger{ display: flex; }
+  .hero{ padding-top: 7rem; }
+  .hero-visual{ width: 46vw; opacity: .9; }
+  .hero-stats{ gap: 2rem; }
+  .story-sticky{ grid-template-columns: 1fr; padding-top: 6rem; }
+  .story-frame{ position: absolute; top: 1.5rem; left: clamp(1.25rem, 6vw, 3rem); right: clamp(1.25rem, 6vw, 3rem); max-width: none; }
+  .story-visual{ grid-column: 1; height: 55%; margin-top: 8rem; }
+  .story-bg-photos{ grid-column: 1; height: 55%; margin-top: 8rem; }
+  .story-img{ max-height: 40vh; }
+  .showcase-grid{ grid-template-columns: repeat(2, 1fr); }
+  .ritual-steps{ gap: 1.6rem; }
+}
+/* ---------- Mobile ---------- */
+@media (max-width: 640px){
+  body{ font-size: 15px; }
+  .hero{ padding-top: 6.5rem; min-height: 92svh; }
+  .hero-visual{
+    position: relative; width: 62vw; margin: 2.4rem auto 0; right: auto; bottom: auto; top: auto;
+    display: flex;
+  }
+  .hero-content{ max-width: 100%; }
+  .hero-title{ font-size: clamp(2.6rem, 13vw, 3.6rem); }
+  .hero-cta-row{ flex-direction: column; align-items: stretch; }
+  .hero-cta-row .btn{ width: 100%; }
+  .hero-stats{ margin-top: 2.4rem; gap: 1.4rem 2rem; }
+  .hero-scroll-cue{ display: none; }
+  .marquee-track span{ font-size: 1.4rem; }
+  .story{ height: 340vh; }
+  .story-sticky{ padding-top: 5rem; }
+  .story-frame{ top: 1rem; }
+  .story-title{ font-size: 1.7rem; }
+  .story-copy{ font-size: .92rem; }
+  .story-visual{ margin-top: 7rem; height: 48%; }
+  .story-bg-photos{ margin-top: 7rem; height: 48%; }
+  .story-img{ max-height: 34vh; }
+  .story-progress{ bottom: 1rem; }
+  .showcase{ padding-top: 4rem; padding-bottom: 4rem; }
+  .showcase-grid{ grid-template-columns: 1fr; gap: 1.2rem; }
+  .product-card-media{ aspect-ratio: 4/3; }
+  .ritual{ height: 260vh; }
+  .ritual-sticky{ gap: 2rem; }
+  .ritual-cup-wrap{ width: 44vw; }
+  .ritual-steps{ flex-wrap: wrap; justify-content: center; gap: 1.2rem 1.8rem; }
+  .ritual-step-label{ font-size: 1rem; }
+  .finale-title{ font-size: clamp(2.2rem, 12vw, 3.2rem); }
+  .finale-product{ width: 58vw; }
+  .finale-cta-row{ flex-direction: column; align-items: stretch; }
+  .finale-cta-row .btn{ width: 100%; }
+  .footer-top{ flex-direction: column; gap: 2rem; }
+  .footer-links{ flex-wrap: wrap; gap: 2rem; }
+}
+/* ---------- Mobile nav drawer (burger toggled) ---------- */
+@media (max-width: 991px){
+  .nav-links.is-open{
+    display: flex; flex-direction: column; position: fixed; inset: 0; z-index: 150;
+    background: var(--cream); align-items: center; justify-content: center; gap: 2.2rem;
+  }
+  .nav-links.is-open .nav-link span{ font-size: 1.4rem; }
+  .nav-burger.is-active span:nth-child(1){ transform: translateY(7px) rotate(45deg); }
+  .nav-burger.is-active span:nth-child(2){ opacity: 0; }
+  .nav-burger.is-active span:nth-child(3){ transform: translateY(-7px) rotate(-45deg); }
+}
+/* ---------- New sections: hero decorative + video steam ---------- */
+.hero-decor{ position: absolute; z-index: 1; pointer-events: none; }
+.hero-leaf-1{ top: 14%; left: 6%; width: 46px; opacity: .55; }
+.hero-leaf-2{ bottom: 22%; left: 12%; width: 30px; opacity: .4; }
+.hero-leaf-3{ top: 34%; left: 42%; width: 22px; opacity: .3; }
+.hero-leaf-4{ top: 8%; left: 32%; width: 36px; opacity: .3; }
+.hero-leaf-5{ bottom: 12%; left: 26%; width: 18px; opacity: .35; }
+
+/* On tablet, thin the botanical field out rather than showing all
+   five at full desktop density. */
+@media (max-width: 991px){
+  .hero-leaf-4, .hero-leaf-5{ display: none; }
+  .hero-steam-video{ opacity: .12; }
+}
+@media (max-width: 640px){
+  .hero-decor{ display: none; }
+  .hero-steam-video{ display: none; }
+  .story-progress-track{ width: 46vw; }
+  .story-progress-labels span{ font-size: .6rem; }
+  .ritual-particles{ display: none; }
+  .nav-underline{ display: none; }
+}
